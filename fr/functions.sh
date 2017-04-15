@@ -1,17 +1,10 @@
-#!/bin/bash
-# Here you can define translations to be used in the plugin functions file
-# the below code is an sample to be reused:
-# 1) uncomment to function below
-# 2) replace XXX by your plugin name (short)
-# 3) remove and add your own translations
-# 4) you can the arguments $2, $3 passed to this function
-# 5) in your plugin functions.sh file, use it like this:
-#      say "$(pv_myplugin_lang the_answer_is "oui")"
-#      => Jarvis: La réponse est oui
+#!/usr/bin/env bash
 
-#pv_XXX_lang () {
-#    case "$1" in
-#        i_check) echo "Je regarde...";;
-#        the_answer_is) echo "La réponse est $2";;
-#    esac
-#} 
+jv_pg_m3_lang()
+{
+  case "$1" in
+    mac_address_is) echo "L'adresse mac du module milight est $2";;
+    invalid_mac_address) echo "Impossible de récupérer l'adresse mac...";;
+    *) jv_error "Erreur: Clef de traduction '$1' non reconnue. Merci de contacter le concepteur de ce plugin.";;
+  esac
+}
