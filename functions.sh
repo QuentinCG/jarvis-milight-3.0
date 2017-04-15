@@ -45,7 +45,7 @@ jv_pg_m3_turnOnAndWhite()
 jv_pg_m3_turnOff()
 {
   # Send request to milight module
-  result="$(python3 plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --turnOff)"
+  result="$(python3 plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --setWhiteMode --turnOff)"
 
   # Show the result to user
   if [[ $result == "" ]]; then
