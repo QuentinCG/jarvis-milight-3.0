@@ -13,6 +13,8 @@ jv_pg_m3_lang()
     turn_on_wifi_bridge_lamp_failed) echo "Echec de l'allumage de la lampe du module";;
     turn_off_wifi_bridge_lamp_success) echo "Lampe du module éteinte";;
     turn_off_wifi_bridge_lamp_failed) echo "Echec de l'extinction de la lampe du module";;
+    turn_on_night_mode_success) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Mode nuit activée pour la zone $zone_name";;
+    turn_on_night_mode_failed) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Echec du lancement du mode nuit de la zone $zone_name";;
     *) jv_error "Erreur: Clef de traduction '$1' non reconnue. Merci de contacter le concepteur de ce plugin.";;
   esac
 }

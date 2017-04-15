@@ -1,15 +1,21 @@
-*MAC*MILIGHT*==jv_pg_m3_getMacAddress
+*MAC*MILIGHT*|*MAC*MODULE*|*MODULE*MAC*|*MILIGHT*MAC*==jv_pg_m3_getMacAddress
 
-*ALLUM*TOU*==jv_pg_m3_turnOnAndWhite 0
-*ETEIN*TOU*==jv_pg_m3_turnOff 0
+*ALLUM*TOU*|*ALLUM*MAISON*==jv_pg_m3_turnOnAndWhite 0
+*ETEIN*TOU*|*ETEIN*MAISON*==jv_pg_m3_turnOff 0
 *ALLUM*CUISINE*==jv_pg_m3_turnOnAndWhite 1
 *ETEIN*CUISINE*==jv_pg_m3_turnOff 1
-*ALLUM*SALON*==jv_pg_m3_turnOnAndWhite 2
-*ETEIN*SALON*==jv_pg_m3_turnOff 2
-*ALLUM*BAIN*==jv_pg_m3_turnOnAndWhite 3
-*ETEIN*BAIN*==jv_pg_m3_turnOff 3
+*ALLUM*SALON*|*ALLUM*SALLE*MANGER*==jv_pg_m3_turnOnAndWhite 2
+*ETEIN*SALON*|*ETEIN*SALLE*MANGER*==jv_pg_m3_turnOff 2
+*ALLUM*BAIN*|*ALLUM*TOILETTE*==jv_pg_m3_turnOnAndWhite 3
+*ETEIN*BAIN*|*ETEIN*TOILETTE*==jv_pg_m3_turnOff 3
 *ALLUM*CHAMBRE*==jv_pg_m3_turnOnAndWhite 4
 *ETEIN*CHAMBRE*==jv_pg_m3_turnOff 4
 
-*ALLUM*LAMPE*MODULE*==jv_pg_m3_turnOnWifiBridgeLamp
-*ETEIN*LAMPE*MODULE*==jv_pg_m3_turnOffWifiBridgeLamp
+*MODE*NUIT*MAISON*|*MAISON*MODE*NUIT*|*TOU*MODE*NUIT*|*MODE*NUIT*TOU*==jv_pg_m3_turnOnAndNight 0
+*MODE*NUIT*CUISINE*|*CUISINE*MODE*NUIT*==jv_pg_m3_turnOnAndNight 1
+*MODE*NUIT*SALON*|*SALON*MODE*NUIT*|*SALLE*MANGER*MODE*NUIT*|*MODE*NUIT*SALLE*MANGER*==jv_pg_m3_turnOnAndNight 2
+*MODE*NUIT*BAIN*|*BAIN*MODE*NUIT*|*TOILETTE*MODE*NUIT*|*MODE*NUIT*TOILETTE*==jv_pg_m3_turnOnAndNight 3
+*MODE*NUIT*CHAMBRE*|*CHAMBRE*MODE*NUIT*==jv_pg_m3_turnOnAndNight 4
+
+*ALLUM*MODULE*|*ALLUM*LAMPE*==jv_pg_m3_turnOnWifiBridgeLamp
+*ETEIN*MODULE*|*ETEIN*LAMPE*==jv_pg_m3_turnOffWifiBridgeLamp
