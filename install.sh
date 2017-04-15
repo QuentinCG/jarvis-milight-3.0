@@ -6,4 +6,4 @@
 [[ -z $(which python3) ]] && sudo apt-get install python3
 
 # Copy latest version of MilightWifiBridge python script
-wget -P plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py https://raw.githubusercontent.com/QuentinCG/Milight-Wifi-Bridge-3.0-Python-Library/master/MilightWifiBridge/MilightWifiBridge.py
+wget -P MilightWifiBridge/ https://raw.githubusercontent.com/QuentinCG/Milight-Wifi-Bridge-3.0-Python-Library/master/MilightWifiBridge/MilightWifiBridge.py
