@@ -33,14 +33,10 @@ jv_pg_m3_lightOnWhite()
   # Send request to milight module
   result="$(python3 plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --turnOn --setWhiteMode)"
 
-  # Get the zone name
-  zone_name=""
-  jv_pg_m3_zone_id_to_zone_name $1 $zone_name
-
   # Show the result to user
   if [[ $result == "" ]]; then
-    say "$(jv_pg_m3_lang light_on_success $zone_name)"
+    say "$(jv_pg_m3_lang light_on_success $1)"
   else
-    say "$(jv_pg_m3_lang light_on_failed $zone_name)"
+    say "$(jv_pg_m3_lang light_on_failed $1)"
   fi
 }
