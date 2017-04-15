@@ -1,5 +1,15 @@
 *MAC*MILIGHT*==jv_pg_m3_getMacAddress
+
+*ALLUM*TOU*==jv_pg_m3_turnOnAndWhite 0
+*ETEIN*TOU*==jv_pg_m3_turnOff 0
 *ALLUM*CUISINE*==jv_pg_m3_turnOnAndWhite 1
 *ETEIN*CUISINE*==jv_pg_m3_turnOff 1
+*ALLUM*SALON*==jv_pg_m3_turnOnAndWhite 2
+*ETEIN*SALON*==jv_pg_m3_turnOff 2
+*ALLUM*BAIN*==jv_pg_m3_turnOnAndWhite 3
+*ETEIN*BAIN*==jv_pg_m3_turnOff 3
+*ALLUM*CHAMBRE*==jv_pg_m3_turnOnAndWhite 4
+*ETEIN*CHAMBRE*==jv_pg_m3_turnOff 4
+
 *ALLUM*LAMPE*MODULE*==jv_pg_m3_turnOnWifiBridgeLamp
 *ETEIN*LAMPE*MODULE*==jv_pg_m3_turnOffWifiBridgeLamp
