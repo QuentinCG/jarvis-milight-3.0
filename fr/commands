@@ -1,2 +1,5 @@
 *MAC*MILIGHT*==jv_pg_m3_getMacAddress
-ALLUM*CUISINE*==jv_pg_m3_lightOnWhite 1
+*ALLUM*CUISINE*==jv_pg_m3_turnOnAndWhite 1
+*ETEIN*CUISINE*==jv_pg_m3_turnOff 1
+*ALLUM*LAMPE*MODULE*==jv_pg_m3_turnOnWifiBridgeLamp
+*ETEIN*LAMPE*MODULE*==jv_pg_m3_turnOffWifiBridgeLamp
