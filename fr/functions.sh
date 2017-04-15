@@ -15,6 +15,13 @@ jv_pg_m3_lang()
     turn_off_wifi_bridge_lamp_failed) echo "Echec de l'extinction de la lampe du module";;
     turn_on_night_mode_success) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Mode nuit activée pour la zone $zone_name";;
     turn_on_night_mode_failed) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Echec du lancement du mode nuit de la zone $zone_name";;
+    turn_on_disco_mode_success) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Mode disco $3 activée pour la zone $zone_name";;
+    turn_on_disco_mode_failed) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Echec du lancement du mode disco $3 de la zone $zone_name";;
+    speed_up_disco_mode_success) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Mode disco plus rapide pour la zone $zone_name";;
+    speed_up_disco_mode_failed) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Echec de l'augmentation de vitesse du mode disco de la zone $zone_name";;
+    slow_down_disco_mode_success) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Mode disco plus lent pour la zone $zone_name";;
+    slow_down_disco_mode_failed) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Echec de la diminution de vitesse du mode disco de la zone $zone_name";;
+
     *) jv_error "Erreur: Clef de traduction '$1' non reconnue. Merci de contacter le concepteur de ce plugin.";;
   esac
 }

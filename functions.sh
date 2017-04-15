@@ -94,3 +94,46 @@ jv_pg_m3_turnOnAndNight()
     say "$(jv_pg_m3_lang turn_on_night_mode_failed $1)"
   fi
 }
+
+# $1: zone id
+# $2: disco mode (1 to 9)
+jv_pg_m3_turnOnAndDiscoMode()
+{
+  # Send request to milight module
+  result="$(python3 plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --turnOn --setDiscoMode $2)"
+
+  # Show the result to user
+  if [[ $result == "" ]]; then
+    say "$(jv_pg_m3_lang turn_on_disco_mode_success $1 $2)"
+  else
+    say "$(jv_pg_m3_lang turn_on_disco_mode_failed $1 $2)"
+  fi
+}
+
+# $1: zone id
+jv_pg_m3_speedUpDiscoMode()
+{
+  # Send request to milight module
+  result="$(python3 plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --speedUpDiscoMode --speedUpDiscoMode --speedUpDiscoMode)"
+
+  # Show the result to user
+  if [[ $result == "" ]]; then
+    say "$(jv_pg_m3_lang speed_up_disco_mode_success $1)"
+  else
+    say "$(jv_pg_m3_lang speed_up_disco_mode_failed $1)"
+  fi
+}
+
+# $1: zone id
+jv_pg_m3_slowDownDiscoMode()
+{
+  # Send request to milight module
+  result="$(python3 plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --slowDownDiscoMode --slowDownDiscoMode --slowDownDiscoMode)"
+
+  # Show the result to user
+  if [[ $result == "" ]]; then
+    say "$(jv_pg_m3_lang slow_down_disco_mode_success $1)"
+  else
+    say "$(jv_pg_m3_lang slow_down_disco_mode_failed $1)"
+  fi
+}
