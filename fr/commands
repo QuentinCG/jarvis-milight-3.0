@@ -1,5 +1,8 @@
 *MAC*MILIGHT*|*MAC*MODULE*|*MODULE*MAC*|*MILIGHT*MAC*==jv_pg_m3_getMacAddress
 
+*ALLUM*MODULE*|*ALLUM*LAMPE*==jv_pg_m3_turnOnWifiBridgeLamp
+*ETEIN*MODULE*|*ETEIN*LAMPE*==jv_pg_m3_turnOffWifiBridgeLamp
+
 *ALLUM*TOU*|*ALLUM*MAISON*==jv_pg_m3_turnOnAndWhite 0
 *ETEIN*TOU*|*ETEIN*MAISON*==jv_pg_m3_turnOff 0
 *ALLUM*CUISINE*==jv_pg_m3_turnOnAndWhite 1
@@ -26,5 +29,11 @@
 *MODE*DISCO*RAPIDE*|*RAPIDE*MODE*DISCO*|*PLUS*VITE*MODE*DISCO*|*MODE*DISCO*PLUS*VITE*==jv_pg_m3_speedUpDiscoMode 0
 *MODE*DISCO*RALEN*|*RALEN*MODE*DISCO*|*PLUS*LENT*MODE*DISCO*|*MODE*DISCO*PLUS*LENT*==jv_pg_m3_slowDownDiscoMode 0
 
-*ALLUM*MODULE*|*ALLUM*LAMPE*==jv_pg_m3_turnOnWifiBridgeLamp
-*ETEIN*MODULE*|*ETEIN*LAMPE*==jv_pg_m3_turnOffWifiBridgeLamp
+*MAISON*ROUGE*==jv_pg_m3_turnOnAndColorMode 0 255 "rouge"
+*MAISON*LAVANDE*==jv_pg_m3_turnOnAndColorMode 0 217 "lavande"
+*MAISON*BLEUE*==jv_pg_m3_turnOnAndColorMode 0 186 "bleue"
+*MAISON*EAU*==jv_pg_m3_turnOnAndColorMode 0 133 "eau"
+*MAISON*VERT*==jv_pg_m3_turnOnAndColorMode 0 122 "vert"
+*MAISON*VERT*CLAIR*==jv_pg_m3_turnOnAndColorMode 0 84 "vert clair"
+*MAISON*JAUNE*==jv_pg_m3_turnOnAndColorMode 0 59 "jaune"
+*MAISON*ORANGE*==jv_pg_m3_turnOnAndColorMode 0 30 "orange"

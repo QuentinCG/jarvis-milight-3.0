@@ -21,6 +21,8 @@ jv_pg_m3_lang()
     speed_up_disco_mode_failed) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Echec de l'augmentation de vitesse du mode disco de la zone $zone_name";;
     slow_down_disco_mode_success) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Mode disco plus lent pour la zone $zone_name";;
     slow_down_disco_mode_failed) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Echec de la diminution de vitesse du mode disco de la zone $zone_name";;
+    set_color_success) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Couleur $3 activée pour la zone $zone_name";;
+    set_color_failed) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Echec de l'activation de la couleur $3 pour la zone $zone_name";;
 
     *) jv_error "Erreur: Clef de traduction '$1' non reconnue. Merci de contacter le concepteur de ce plugin.";;
   esac

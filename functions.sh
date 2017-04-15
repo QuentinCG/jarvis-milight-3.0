@@ -137,3 +137,19 @@ jv_pg_m3_slowDownDiscoMode()
     say "$(jv_pg_m3_lang slow_down_disco_mode_failed $1)"
   fi
 }
+
+# $1: zone id
+# $2: color value (0 to 255)
+# $3: color name (no space)
+jv_pg_m3_turnOnAndColorMode()
+{
+  # Send request to milight module
+  result="$(python3 plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --turnOn --setColor $2)"
+
+  # Show the result to user
+  if [[ $result == "" ]]; then
+    say "$(jv_pg_m3_lang set_color_success $1 $3)"
+  else
+    say "$(jv_pg_m3_lang set_color_failed $1 $3)"
+  fi
+}
