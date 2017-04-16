@@ -13,9 +13,9 @@ jv_pg_m3_lang()
     turn_on_wifi_bridge_lamp_failed) echo "Echec de l'allumage de la lampe du module";;
     turn_off_wifi_bridge_lamp_success) echo "Lampe du module éteinte";;
     turn_off_wifi_bridge_lamp_failed) echo "Echec de l'extinction de la lampe du module";;
-    turn_on_night_mode_success) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Mode nuit activée pour la zone $zone_name";;
+    turn_on_night_mode_success) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Mode nuit activé pour la zone $zone_name";;
     turn_on_night_mode_failed) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Echec du lancement du mode nuit de la zone $zone_name";;
-    turn_on_disco_mode_success) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Mode disco $3 activée pour la zone $zone_name";;
+    turn_on_disco_mode_success) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Mode disco $3 activé pour la zone $zone_name";;
     turn_on_disco_mode_failed) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Echec du lancement du mode disco $3 de la zone $zone_name";;
     speed_up_disco_mode_success) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Mode disco plus rapide pour la zone $zone_name";;
     speed_up_disco_mode_failed) jv_pg_m3_zone_id_to_zone_name $2 zone_name; echo "Echec de l'augmentation de vitesse du mode disco de la zone $zone_name";;

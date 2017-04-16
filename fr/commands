@@ -31,7 +31,7 @@
 
 *MAISON*ROUGE*|*ROUGE*MAISON*==jv_pg_m3_turnOnAndColorMode 0 255 "rouge"
 *MAISON*LAVANDE*|*LAVANDE*MAISON*==jv_pg_m3_turnOnAndColorMode 0 217 "lavande"
-*MAISON*BLEUE*|*BLEUE*MAISON*==jv_pg_m3_turnOnAndColorMode 0 186 "bleue"
+*MAISON*BLEU*|*BLEU*MAISON*==jv_pg_m3_turnOnAndColorMode 0 186 "bleu"
 *MAISON*EAU*|*EAU*MAISON*==jv_pg_m3_turnOnAndColorMode 0 133 "eau"
 *MAISON*VERT*CLAIR*|*VERT*CLAIR*MAISON*==jv_pg_m3_turnOnAndColorMode 0 84 "vert clair"
 *MAISON*VERT*|*VERT*MAISON*==jv_pg_m3_turnOnAndColorMode 0 122 "vert"
@@ -40,7 +40,7 @@
 
 *CUISINE*ROUGE*|*ROUGE*CUISINE*==jv_pg_m3_turnOnAndColorMode 1 255 "rouge"
 *CUISINE*LAVANDE*|*LAVANDE*CUISINE*==jv_pg_m3_turnOnAndColorMode 1 217 "lavande"
-*CUISINE*BLEUE*|*BLEUE*CUISINE*==jv_pg_m3_turnOnAndColorMode 1 186 "bleue"
+*CUISINE*BLEU*|*BLEU*CUISINE*==jv_pg_m3_turnOnAndColorMode 1 186 "bleu"
 *CUISINE*EAU*|*EAU*CUISINE*==jv_pg_m3_turnOnAndColorMode 1 133 "eau"
 *CUISINE*VERT*CLAIR*|*VERT*CLAIR*CUISINE*==jv_pg_m3_turnOnAndColorMode 1 84 "vert clair"
 *CUISINE*VERT*|*VERT*CUISINE*==jv_pg_m3_turnOnAndColorMode 1 122 "vert"
@@ -49,7 +49,7 @@
 
 *SALON*ROUGE*|*ROUGE*SALON*|*SALLE*MANGER*ROUGE*|*ROUGE*SALLE*MANGER*==jv_pg_m3_turnOnAndColorMode 2 255 "rouge"
 *SALON*LAVANDE*|*LAVANDE*SALON*|*SALLE*MANGER*LAVANDE*|*LAVANDE*SALLE*MANGER*==jv_pg_m3_turnOnAndColorMode 2 217 "lavande"
-*SALON*BLEUE*|*BLEUE*SALON*|*SALLE*MANGER*BLEUE*|*BLEUE*SALLE*MANGER*==jv_pg_m3_turnOnAndColorMode 2 186 "bleue"
+*SALON*BLEU*|*BLEU*SALON*|*SALLE*MANGER*BLEU*|*BLEU*SALLE*MANGER*==jv_pg_m3_turnOnAndColorMode 2 186 "bleu"
 *SALON*EAU*|*EAU*SALON*|*SALLE*MANGER*EAU*|*EAU*SALLE*MANGER*==jv_pg_m3_turnOnAndColorMode 2 133 "eau"
 *SALON*VERT*CLAIR*|*VERT*CLAIR*SALON*|*SALLE*MANGER*VERT*CLAIR*|*VERT*CLAIR*SALLE*MANGER*==jv_pg_m3_turnOnAndColorMode 2 84 "vert clair"
 *SALON*VERT*|*VERT*SALON*|*SALLE*MANGER*VERT*|*VERT*SALLE*MANGER*==jv_pg_m3_turnOnAndColorMode 2 122 "vert"
@@ -58,7 +58,7 @@
 
 *BAIN*ROUGE*|*ROUGE*BAIN*|*TOILETTE*ROUGE*|*ROUGE*TOILETTE*==jv_pg_m3_turnOnAndColorMode 3 255 "rouge"
 *BAIN*LAVANDE*|*LAVANDE*BAIN*|*TOILETTE*LAVANDE*|*LAVANDE*TOILETTE*==jv_pg_m3_turnOnAndColorMode 3 217 "lavande"
-*BAIN*BLEUE*|*BLEUE*BAIN*|*TOILETTE*BLEUE*|*BLEUE*TOILETTE*==jv_pg_m3_turnOnAndColorMode 3 186 "bleue"
+*BAIN*BLEU*|*BLEU*BAIN*|*TOILETTE*BLEU*|*BLEU*TOILETTE*==jv_pg_m3_turnOnAndColorMode 3 186 "bleu"
 *BAIN*EAU*|*EAU*BAIN*|*TOILETTE*EAU*|*EAU*TOILETTE*==jv_pg_m3_turnOnAndColorMode 3 133 "eau"
 *BAIN*VERT*CLAIR*|*VERT*CLAIR*BAIN*|*TOILETTE*VERT*CLAIR*|*VERT*CLAIR*TOILETTE*==jv_pg_m3_turnOnAndColorMode 3 84 "vert clair"
 *BAIN*VERT*|*VERT*BAIN*|*TOILETTE*VERT*|*VERT*TOILETTE*==jv_pg_m3_turnOnAndColorMode 3 122 "vert"
@@ -67,7 +67,7 @@
 
 *CHAMBRE*ROUGE*|*ROUGE*CHAMBRE*==jv_pg_m3_turnOnAndColorMode 4 255 "rouge"
 *CHAMBRE*LAVANDE*|*LAVANDE*CHAMBRE*==jv_pg_m3_turnOnAndColorMode 4 217 "lavande"
-*CHAMBRE*BLEUE*|*BLEUE*CHAMBRE*==jv_pg_m3_turnOnAndColorMode 4 186 "bleue"
+*CHAMBRE*BLEU*|*BLEU*CHAMBRE*==jv_pg_m3_turnOnAndColorMode 4 186 "bleu"
 *CHAMBRE*EAU*|*EAU*CHAMBRE*==jv_pg_m3_turnOnAndColorMode 4 133 "eau"
 *CHAMBRE*VERT*CLAIR*|*VERT*CLAIR*CHAMBRE*==jv_pg_m3_turnOnAndColorMode 4 84 "vert clair"
 *CHAMBRE*VERT*|*VERT*CHAMBRE*==jv_pg_m3_turnOnAndColorMode 4 122 "vert"
