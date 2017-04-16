@@ -2,7 +2,7 @@
 Control wireless lights (milight 3.0) with Jarvis (voice assistant)
 
 
-<img src="https://github.com/QuentinCG/jarvis-milight-3.0/raw/master/milight.jpg" width="800">
+<img src="https://raw.githubusercontent.com/QuentinCG/jarvis-milight-3.0/master/milight.jpg" width="800">
 
 
 ## Usage
