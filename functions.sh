@@ -28,138 +28,229 @@ jv_pg_m3_getMacAddress()
   fi
 }
 
+
 # $1: zone id
+# $2 (bool, optional): Silent ("True" for no Jarvis response, "False" or no value for Jarvis response)
+#
+# return (int): 0 if success, 1 if failed
 jv_pg_m3_turnOnAndWhite()
 {
   # Send request to milight module
   local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --turnOn --setWhiteMode`
 
-  # Show the result to user
+  # Show the result to user (if requested)
   if [[ $result == "" ]]; then
-    say "$(jv_pg_m3_lang turn_on_success $1)"
+    if [[ ! $2 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang turn_on_success $1)"
+    fi
+    return 0
   else
-    say "$(jv_pg_m3_lang turn_on_failed $1)"
+    if [[ ! $2 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang turn_on_failed $1)"
+    fi
   fi
+
+  return 1
 }
 
 # $1: zone id
+# $2 (bool, optional): Silent ("True" for no Jarvis response, "False" or no value for Jarvis response)
+#
+# return (int): 0 if success, 1 if failed
 jv_pg_m3_turnOff()
 {
   # Send request to milight module
   local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --setWhiteMode --turnOff`
 
-  # Show the result to user
+  # Show the result to user (if requested)
   if [[ $result == "" ]]; then
-    say "$(jv_pg_m3_lang turn_off_success $1)"
+    if [[ ! $2 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang turn_off_success $1)"
+    fi
+    return 0
   else
-    say "$(jv_pg_m3_lang turn_off_failed $1)"
+    if [[ ! $2 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang turn_off_failed $1)"
+    fi
   fi
+
+  return 1
 }
 
+# $1 (bool, optional): Silent ("True" for no Jarvis response, "False" or no value for Jarvis response)
+#
+# return (int): 0 if success, 1 if failed
 jv_pg_m3_turnOnWifiBridgeLamp()
 {
   # Send request to milight module
   local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --turnOnWifiBridgeLamp`
 
-  # Show the result to user
+  # Show the result to user (if requested)
   if [[ $result == "" ]]; then
-    say "$(jv_pg_m3_lang turn_on_wifi_bridge_lamp_success)"
+    if [[ ! $1 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang turn_on_wifi_bridge_lamp_success)"
+    fi
+    return 0
   else
-    say "$(jv_pg_m3_lang turn_on_wifi_bridge_lamp_failed)"
+    if [[ ! $1 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang turn_on_wifi_bridge_lamp_failed)"
+    fi
   fi
+
+  return 1
 }
 
+# $1 (bool, optional): Silent ("True" for no Jarvis response, "False" or no value for Jarvis response)
+#
+# return (int): 0 if success, 1 if failed
 jv_pg_m3_turnOffWifiBridgeLamp()
 {
   # Send request to milight module
   local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --turnOffWifiBridgeLamp`
 
-  # Show the result to user
+  # Show the result to user (if requested)
   if [[ $result == "" ]]; then
-    say "$(jv_pg_m3_lang turn_off_wifi_bridge_lamp_success)"
+    if [[ ! $1 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang turn_off_wifi_bridge_lamp_success)"
+    fi
+    return 0
   else
-    say "$(jv_pg_m3_lang turn_off_wifi_bridge_lamp_failed)"
+    if [[ ! $1 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang turn_off_wifi_bridge_lamp_failed)"
+    fi
   fi
+
+  return 1
 }
 
 # $1: zone id
+# $2 (bool, optional): Silent ("True" for no Jarvis response, "False" or no value for Jarvis response)
+#
+# return (int): 0 if success, 1 if failed
 jv_pg_m3_turnOnAndNight()
 {
   # Send request to milight module
   local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --turnOn --setNightMode`
 
-  # Show the result to user
+  # Show the result to user (if requested)
   if [[ $result == "" ]]; then
-    say "$(jv_pg_m3_lang turn_on_night_mode_success $1)"
+    if [[ ! $2 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang turn_on_night_mode_success $1)"
+    fi
+    return 0
   else
-    say "$(jv_pg_m3_lang turn_on_night_mode_failed $1)"
+    if [[ ! $2 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang turn_on_night_mode_failed $1)"
+    fi
   fi
+
+  return 1
 }
 
 # $1: zone id
 # $2: disco mode (1 to 9)
+# $3 (bool, optional): Silent ("True" for no Jarvis response, "False" or no value for Jarvis response)
+#
+# return (int): 0 if success, 1 if failed
 jv_pg_m3_turnOnAndDiscoMode()
 {
   # Send request to milight module
   local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --turnOn --setDiscoMode $2`
 
-  # Show the result to user
+  # Show the result to user (if requested)
   if [[ $result == "" ]]; then
-    say "$(jv_pg_m3_lang turn_on_disco_mode_success $1 $2)"
+    if [[ ! $3 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang turn_on_disco_mode_success $1 $2)"
+    fi
+    return 0
   else
-    say "$(jv_pg_m3_lang turn_on_disco_mode_failed $1 $2)"
+    if [[ ! $3 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang turn_on_disco_mode_failed $1 $2)"
+    fi
   fi
+
+  return 1
 }
 
 # $1: zone id
+# $2 (bool, optional): Silent ("True" for no Jarvis response, "False" or no value for Jarvis response)
+#
+# return (int): 0 if success, 1 if failed
 jv_pg_m3_speedUpDiscoMode()
 {
   # Send request to milight module
   local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --speedUpDiscoMode --speedUpDiscoMode --speedUpDiscoMode`
 
-  # Show the result to user
+  # Show the result to user (if requested)
   if [[ $result == "" ]]; then
-    say "$(jv_pg_m3_lang speed_up_disco_mode_success $1)"
+    if [[ ! $2 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang speed_up_disco_mode_success $1)"
+    fi
+    return 0
   else
-    say "$(jv_pg_m3_lang speed_up_disco_mode_failed $1)"
+    if [[ ! $2 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang speed_up_disco_mode_failed $1)"
+    fi
   fi
+
+  return 1
 }
 
 # $1: zone id
+# $2 (bool, optional): Silent ("True" for no Jarvis response, "False" or no value for Jarvis response)
+#
+# return (int): 0 if success, 1 if failed
 jv_pg_m3_slowDownDiscoMode()
 {
   # Send request to milight module
   local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --slowDownDiscoMode --slowDownDiscoMode --slowDownDiscoMode`
 
-  # Show the result to user
+  # Show the result to user (if requested)
   if [[ $result == "" ]]; then
-    say "$(jv_pg_m3_lang slow_down_disco_mode_success $1)"
+    if [[ ! $2 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang slow_down_disco_mode_success $1)"
+    fi
+    return 0
   else
-    say "$(jv_pg_m3_lang slow_down_disco_mode_failed $1)"
+    if [[ ! $2 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang slow_down_disco_mode_failed $1)"
+    fi
   fi
+
+  return 1
 }
 
 # $1: zone id
 # $2: color value (0 to 255)
 # $3: color name (no space)
+# $4 (bool, optional): Silent ("True" for no Jarvis response, "False" or no value for Jarvis response)
+#
+# return (int): 0 if success, 1 if failed
 jv_pg_m3_turnOnAndColorMode()
 {
   # Send request to milight module
   local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --turnOn --setColor $2`
 
-  # Show the result to user
+  # Show the result to user (if requested)
   if [[ $result == "" ]]; then
-    say "$(jv_pg_m3_lang set_color_success $1 $3)"
+    if [[ ! $4 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang set_color_success $1 $3)"
+    fi
+    return 0
   else
-    say "$(jv_pg_m3_lang set_color_failed $1 $3)"
+    if [[ ! $4 =~ "True" ]]; then
+      say "$(jv_pg_m3_lang set_color_failed $1 $3)"
+    fi
   fi
+
+  return 1
 }
