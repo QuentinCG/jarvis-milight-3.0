@@ -17,7 +17,8 @@ jv_pg_m3_zone_id_to_zone_name()
 jv_pg_m3_getMacAddress()
 {
   # Send request to milight module
-  result="$(python3 plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --getMacAddress)"
+  local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --getMacAddress`
 
   # Show the result to user
   if [[ $result =~ ^[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}$ ]]; then
@@ -31,7 +32,8 @@ jv_pg_m3_getMacAddress()
 jv_pg_m3_turnOnAndWhite()
 {
   # Send request to milight module
-  result="$(python3 plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --turnOn --setWhiteMode)"
+  local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --turnOn --setWhiteMode`
 
   # Show the result to user
   if [[ $result == "" ]]; then
@@ -45,7 +47,8 @@ jv_pg_m3_turnOnAndWhite()
 jv_pg_m3_turnOff()
 {
   # Send request to milight module
-  result="$(python3 plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --setWhiteMode --turnOff)"
+  local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --setWhiteMode --turnOff`
 
   # Show the result to user
   if [[ $result == "" ]]; then
@@ -58,7 +61,8 @@ jv_pg_m3_turnOff()
 jv_pg_m3_turnOnWifiBridgeLamp()
 {
   # Send request to milight module
-  result="$(python3 plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --turnOnWifiBridgeLamp)"
+  local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --turnOnWifiBridgeLamp`
 
   # Show the result to user
   if [[ $result == "" ]]; then
@@ -71,7 +75,8 @@ jv_pg_m3_turnOnWifiBridgeLamp()
 jv_pg_m3_turnOffWifiBridgeLamp()
 {
   # Send request to milight module
-  result="$(python3 plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --turnOffWifiBridgeLamp)"
+  local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --turnOffWifiBridgeLamp`
 
   # Show the result to user
   if [[ $result == "" ]]; then
@@ -85,7 +90,8 @@ jv_pg_m3_turnOffWifiBridgeLamp()
 jv_pg_m3_turnOnAndNight()
 {
   # Send request to milight module
-  result="$(python3 plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --turnOn --setNightMode)"
+  local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --turnOn --setNightMode`
 
   # Show the result to user
   if [[ $result == "" ]]; then
@@ -100,7 +106,8 @@ jv_pg_m3_turnOnAndNight()
 jv_pg_m3_turnOnAndDiscoMode()
 {
   # Send request to milight module
-  result="$(python3 plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --turnOn --setDiscoMode $2)"
+  local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --turnOn --setDiscoMode $2`
 
   # Show the result to user
   if [[ $result == "" ]]; then
@@ -114,7 +121,8 @@ jv_pg_m3_turnOnAndDiscoMode()
 jv_pg_m3_speedUpDiscoMode()
 {
   # Send request to milight module
-  result="$(python3 plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --speedUpDiscoMode --speedUpDiscoMode --speedUpDiscoMode)"
+  local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --speedUpDiscoMode --speedUpDiscoMode --speedUpDiscoMode`
 
   # Show the result to user
   if [[ $result == "" ]]; then
@@ -128,7 +136,8 @@ jv_pg_m3_speedUpDiscoMode()
 jv_pg_m3_slowDownDiscoMode()
 {
   # Send request to milight module
-  result="$(python3 plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --slowDownDiscoMode --slowDownDiscoMode --slowDownDiscoMode)"
+  local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --slowDownDiscoMode --slowDownDiscoMode --slowDownDiscoMode`
 
   # Show the result to user
   if [[ $result == "" ]]; then
@@ -144,7 +153,8 @@ jv_pg_m3_slowDownDiscoMode()
 jv_pg_m3_turnOnAndColorMode()
 {
   # Send request to milight module
-  result="$(python3 plugins/jarvis-milight-3.0/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --turnOn --setColor $2)"
+  local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+  local result=`python3 $dir/MilightWifiBridge/MilightWifiBridge.py --ip $var_jv_pg_m3_ip --port $var_jv_pg_m3_port --timeout $var_jv_pg_m3_request_timeout_in_sec --zone $1 --turnOn --setColor $2`
 
   # Show the result to user
   if [[ $result == "" ]]; then
