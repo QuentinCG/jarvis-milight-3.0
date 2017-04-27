@@ -1,5 +1,5 @@
 ## Description
-Control wireless lights (milight 3.0) with Jarvis (voice assistant)
+Control wireless lights (milight 3.0) with <a target="_blank" href="http://domotiquefacile.fr/jarvis/">Jarvis assistant</a>.
 
 
 <img src="https://raw.githubusercontent.com/QuentinCG/jarvis-milight-3.0/master/milight.jpg" width="800">
@@ -38,15 +38,15 @@ Jarvis: Lampe du module éteinte
 
 ## How to install
 
-1) Connect your Milight 3.0 wifi bridge to your wifi network (install the android app and follow the instruction: https://play.google.com/store/apps/details?id=com.irainxun.wifilight)
+1) Connect your Milight 3.0 wifi bridge (Wifi Ibox v1.0 for example) to your wifi network (install the android app and follow the instruction: https://play.google.com/store/apps/details?id=com.irainxun.wifilight)
 
 2) Get IP address and port of the wifi bridge (you can for example use this software to help you: http://www.limitlessled.com/download/LimitlessLEDv4.zip)
 
-3) Add this plugin in <a target="_blank" href="http://domotiquefacile.fr/jarvis/content/plugins">Jarvis project</a>
+3) Add this plugin to your <a target="_blank" href="http://domotiquefacile.fr/jarvis/">Jarvis assistant</a> (<a target="_blank" href="http://domotiquefacile.fr/jarvis/content/plugins">more info here</a>): ```./jarvis.sh -p https://github.com/QuentinCG/jarvis-milight-3.0```
 
 4) Configure the <a target="_blank" href="https://github.com/QuentinCG/jarvis-milight-3.0/blob/master/config.sh">configuration file</a> to match your requirements.
 
-5) Edit the <a target="_blank" href="https://github.com/QuentinCG/jarvis-milight-3.0/blob/master/fr/commands">command file</a> if zone is not compatible with the on defined in the file.
+5) Edit the <a target="_blank" href="https://github.com/QuentinCG/jarvis-milight-3.0/blob/master/fr/commands">command file</a> if zone is not compatible with those defined in the file.
 
 6) Enjoy
 
