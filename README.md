@@ -38,9 +38,9 @@ Jarvis: Lampe du module éteinte
 
 ## How to install
 
-1) Connect your Milight 3.0 wifi bridge (Wifi Ibox v1.0 for example) to your wifi network (install the android app and follow the instruction: https://play.google.com/store/apps/details?id=com.irainxun.wifilight)
+1) Connect your Milight 3.0 wifi bridge (Wifi Ibox v1.0 for example) to your wifi network (install the <a target="_blank" href="https://play.google.com/store/apps/details?id=com.irainxun.wifilight">milight 3 android app</a> and follow the instructions)
 
-2) Get IP address and port of the wifi bridge (you can for example use this software to help you: http://www.limitlessled.com/download/LimitlessLEDv4.zip)
+2) Get IP address and port of the wifi bridge (you can for example use <a target="_blank" href="http://www.limitlessled.com/download/LimitlessLEDv4.zip">LimitlessLEDv4 software</a> to help you get all those informations)
 
 3) Add this plugin to your <a target="_blank" href="http://domotiquefacile.fr/jarvis/">Jarvis assistant</a> (<a target="_blank" href="http://domotiquefacile.fr/jarvis/content/plugins">more info here</a>): ```./jarvis.sh -p https://github.com/QuentinCG/jarvis-milight-3.0```
 
